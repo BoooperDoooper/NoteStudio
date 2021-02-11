@@ -1,0 +1,605 @@
+#main-container {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    box-sizing: border-box;
+    background-color: rgb(0, 0, 22);
+    width: 100%;
+    height: 800px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: -1;
+    background-attachment: scroll;
+}
+.toolbar {
+    overflow: none;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 60px;
+    background-color: rgb(11, 10, 17);
+    font-family: Arial;
+    width: 100%;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+.toolbar a {
+    float: right;
+    font-size: 24px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+.toolbar-items:hover {
+    border-bottom: 3px solid white;
+    cursor: pointer;
+}
+.dropdown {
+    float: right;
+    overflow: hidden;
+}
+.dropdown .dropbutton {
+    font-size: 24px;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit; 
+    margin: 0; 
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 10px;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+#dropdown-contentnote {
+    right: 50px;
+}
+.dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    border-bottom: 0.5px solid #000;
+}
+.dropdown-content a:hover {
+    background-color: #000000;
+    color: white;
+}
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+#title {
+    background-color: transparent;
+    font-size: 30px;
+    float: left;
+    color: rgba(128, 255, 0, 1);
+    padding: 2px;
+    margin: 3px;
+    margin-left: 10px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+
+
+#infoButton {
+    cursor: pointer;
+    border-left: rgba(128, 255, 0, 1);
+    border-right: rgba(128, 255, 0, 1);
+}
+#infoButton:hover {
+    border-bottom: 3px solid white;
+}
+button {
+    cursor: pointer;
+}
+.noSelect {
+    -webkit-touch-callout: none; 
+    -webkit-user-select: none; 
+    -khtml-user-select: none;
+    -moz-user-select: none; 
+    -ms-user-select: none; 
+    user-select: none; 
+    cursor: pointer;
+}
+.abc {
+    cursor: progress;
+}
+
+#infoBox {                             /*start for javascript related css*/
+    background-color: rgb(182, 0, 0);
+    margin-top: 60px;
+    width: 300px;
+    height: 300px;
+    border-radius: 7px;
+    display: block;
+    box-shadow: 1.5px 1.5px 1.5px 1.5px rgb(70, 0, 0);
+}
+
+#noteBox {
+    background-color: rgb(233, 93, 0);
+    margin-top: 60px;
+    width: 300px;
+    height: 300px;
+    border-radius: 7px;
+    display: block;
+    box-shadow: 1.5px 1.5px 1.5px 1.5px rgb(119, 34, 0);
+}
+
+
+#calBox {
+    background-color: rgb(63, 63, 63);
+    margin-top: 60px;
+    width: 300px;
+    height: 300px;
+    border-radius: 7px;
+    display: block;
+    box-shadow: 1.5px 1.5px 1.5px 1.5px rgb(44, 44, 44);
+}
+
+#clockBox {
+    background-color: cyan;
+    margin-top: 60px;
+    width: 300px;
+    height: 300px;
+    border-radius: 7px;
+    display: block;
+    box-shadow: 1.5px 1.5px 1.5px 1.5px rgb(0, 71, 71);
+    justify-items: center;
+}
+
+#checkBox {
+    background-color: rgb(39, 197, 0);
+    margin-top: 60px;
+    width: 300px;
+    height: 300px;
+    border-radius: 7px;
+    display: block;
+    box-shadow: 1.5px 1.5px 1.5px 1.5px rgb(8, 70, 0);
+}
+
+#dictBox {
+    background-color: rgb(0, 13, 196);
+    margin-top: 60px;
+    width: 300px;
+    height: 300px;
+    border-radius: 7px;
+    display: block;
+    box-shadow: 1.5px 1.5px 1.5px 1.5px rgb(1, 11, 111);
+}
+.innerButton {
+    margin: 2px;
+    margin-top: 5px;
+    float: right;
+    border-radius: 50%;
+    box-shadow: 5px;
+    color: black;
+    font-weight: bold;
+    background: white;
+}
+.innerButton:active {
+    color: white;
+    background: black;
+    border: transparent;
+}
+.innerH3 {
+    float: left;
+    margin: 2px;
+    font-size: 24px;
+}
+.innerText {
+    margin-top: 50px;
+    overflow: auto;
+    margin-left: 5px;
+    margin-right: 5px;
+    cursor: default;
+}
+#sunsetImg {
+    height: 253px;
+    width: 284px;
+    position: relative;
+    top: 40px;
+    left: 3px;
+    overflow: visible;
+    background-image: url(sunset.jpg);
+    background-repeat: no-repeat;
+    border-radius: 7px;
+}
+.clock {
+    position: relative;
+    top: 45%;
+    left: -20px;
+    color: black;
+    font-weight: bold;
+    font-size: 36px;
+    z-index: 1;
+}
+
+
+
+
+
+#upperDrag1 {
+    background: rgb(160, 0, 0);
+    height: 30px;
+    width: 97.5%;
+    border-radius: 7px;
+    border: 4px solid rgb(130, 0, 0);
+    box-shadow: 0px 1.5px 1.5px 1.5px rgb(70, 0, 0);
+    margin-left: 1px;
+}
+
+#upperDrag2 {
+    background: rgb(53, 53, 53);
+    height: 30px;
+    width: 97.5%;
+    border-radius: 7px;
+    border: 4px solid rgb(34, 34, 34);
+    box-shadow: 0px 1.5px 1.5px 1.5px rgb(44, 44, 44);
+    margin-left: 1px;
+}
+
+#upperDrag3 {
+    background: rgb(233, 93, 0);
+    height: 30px;
+    width: 97.5%;
+    border-radius: 7px;
+    border: 4px solid rgb(221, 81, 0);
+    box-shadow: 0px 1.5px 1.5px 1.5px rgb(119, 34, 0);
+    margin-left: 1px;
+}
+
+#upperDrag4 {
+    background: rgb(30, 197, 0);
+    height: 30px;
+    width: 97.5%;
+    border-radius: 7px;
+    border: 4px solid rgb(27, 161, 0);
+    box-shadow: 0px 1.5px 1.5px 1.5px rgb(11, 49, 0);
+    margin-left: 1px;
+}
+#upperDrag5 {
+    background: rgb(0, 13, 196);
+    height: 30px;
+    width: 97.5%;
+    border-radius: 7px;
+    border: 4px solid rgb(0, 7, 99);
+    box-shadow: 0px 1.5px 1.5px 1.5px rgb(1, 11, 111);
+    margin-left: 1px;
+}
+#upperDrag6 {
+    background: cyan;
+    height: 30px;
+    width: 97.5%;
+    border-radius: 7px;
+    border: 4px solid rgb(0, 207, 207);
+    box-shadow: 0px 1.5px 1.5px 1.5px rgb(0, 71, 71);
+    margin-left: 1px;
+}
+
+
+
+
+
+
+table {
+    width: 280px;
+    height: 230px;
+    font-size: large;
+    position: relative;
+    top: 20px;
+    left: 0px;
+    margin: 5px auto;
+}
+#display {
+    width: 100%;
+    height: 50px;
+    border: 2px solid black;
+    text-align: right;
+    vertical-align: bottom;
+    border-radius: 7px;
+    background: rgb(226, 226, 226);
+    font-size: 30px;
+    box-shadow: 0px 1px 1px 0px black;
+    font-weight: bold;
+    overflow: hidden;
+}
+.number {
+    width: 25px;
+    height: 25px;
+    border: 2px solid black;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    border-radius: 7px;
+    background: rgb(2, 0, 20);
+    box-shadow: 0px 1px 1px 0px black;
+    font-weight: bold;
+    color: white;
+}
+.number:active:hover {
+    background: chartreuse;
+    color: black;
+}
+.number:hover {
+    background: black;
+    color: white;
+}
+.operator {
+    width: 25px;
+    height: 25px;
+    border: 2px solid black;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    border-radius: 7px;
+    box-shadow: 0px 1px 1px 0px black;
+    font-size: 24px;
+    color: black;
+    background: cyan;
+}
+.operator:active {
+    background: rgb(119, 0, 119);
+    color: black;
+}
+.clearAll {
+    width: 50%;
+    border: 2px solid black;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    border-radius: 7px;
+    background: rgb(226, 226, 226);
+    box-shadow: 0px 1px 1px 0px black;
+    font-weight: bold;
+    color: black;
+}
+.clearAll:active {
+    color: white;
+    background: red;
+}
+.delete {
+    width: 25%;
+    border: 2px solid black;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    border-radius: 7px;
+    background: rgb(226, 226, 226);
+    box-shadow: 0px 1px 1px 0px black;
+    font-weight: bold;
+    color: black;
+}
+.delete:active {
+    color: white;
+    background: red;
+}
+#equal {
+    background: red;
+    color: black;
+}
+#equal:active {
+    color: white;
+    background: rgb(2, 0, 20);
+}
+#calBox .number button {
+    background: none;
+    border: none;
+    font-size: 20px;
+    color: white;
+    width: 60px;
+    height: 28px;
+}
+#calBox .operator button {
+    background: none;
+    border: none;
+    font-size: 20px;
+    color: black;
+    width: 60px;
+    height: 28px;
+}
+#calBox .delete button {
+    background: none;
+    border: none;
+    font-size: 20px;
+    color: black;
+    width: 60px;
+    height: 28px;
+}
+#calBox .clearAll button {
+    background: none;
+    border: none;
+    font-size: 20px;
+    color: black;
+    width: 130px;
+    height: 28px;
+}
+#calBox button {
+    outline-color: rgb(2, 0, 20);
+}
+
+
+
+textarea {
+    position: relative;
+    top: -2px;
+    left: -4px;
+    width: 285px;
+    height: 211px;
+    margin-top: 50px;
+    resize: none;
+    display: block;
+    border-radius: 7px;
+    background: rgb(255, 196, 0);
+    border: 2px solid rgb(85, 47, 0);
+    outline: none;
+    padding: 5px;
+}
+#noteTitle {
+    position: relative;
+    top: 45px;
+    left: -27px;
+    border: none;
+    border-bottom: 2px solid black;
+    background-color: transparent;
+    text-align: center;
+    color: black;
+    outline: none;
+    width: 150px;
+    font-size: 18px;
+}
+
+
+
+
+#wordInput {
+    position: relative;
+    top: 20px;
+    left: 3px;
+    height: 25px;
+    width: 200px;
+    background: #00a2ff;
+    border: 2px solid #0044ff;
+    border-radius: 5px;
+    outline: none;
+    font-size: 24px;
+    color: black;
+}
+#searchBtn {
+    position: relative;
+    top: 17px;
+    left: 10px;
+    width: 75px;
+    height: 31px;
+    background: #00a2ff;
+    border: 2px solid #0044ff;
+    outline: none;
+    border-radius: 5px;
+    font-size: 18px;
+    color: black;
+    font-weight: bold;
+}
+#defBox {
+    height: 185px;
+    width: 268px;
+    display: block;
+    border: 2px solid rgb(0, 4, 255);
+    position: relative;
+    top: 23px;
+    left: 2px;
+    font-size: 18px;
+    background: rgb(0, 153, 255);
+    padding: 7px;
+    resize: both;
+    border-radius: 5px;
+}
+
+
+#checkBox li {
+    width: 200px;
+    height: 30px;
+    font-size: 28px;
+    border: none;
+    list-style: square;
+    color: black;
+    background: transparent;
+    position: relative;
+    top: 25px;
+    left: 5px;
+}
+#list1 {
+    position: relative;
+    top: -225px;
+    left: 50px;
+    width: 230px;
+    border: 2px solid green;
+    outline: none;
+    background: rgb(0, 153, 0);
+}
+#list2 {
+    position: relative;
+    top: -217px;
+    left: 50px;
+    width: 230px;
+    border: 2px solid green;
+    outline: none;
+    background: rgb(0, 153, 0);
+}
+#list3 {
+    position: relative;
+    top: -207px;
+    left: 50px;
+    width: 230px;
+    border: 2px solid green;
+    outline: none;
+    background: rgb(0, 153, 0);
+}
+#list4 {
+    position: relative;
+    top: -198px;
+    left: 50px;
+    width: 230px;
+    border: 2px solid green;
+    outline: none;
+    background: rgb(0, 153, 0);
+}
+#list5 {
+    position: relative;
+    top: -188px;
+    left: 50px;
+    width: 230px;
+    border: 2px solid green;
+    outline: none;
+    background: rgb(0, 153, 0);
+}
+#list6 {
+    position: relative;
+    top: -180px;
+    left: 50px;
+    width: 230px;
+    border: 2px solid green;
+    outline: none;
+    background: rgb(0, 153, 0);
+}
+#list7 {
+    position: relative;
+    top: -170px;
+    left: 50px;
+    width: 230px;
+    border: 2px solid green;
+    outline: none;
+    background: rgb(0, 153, 0);
+}
+#list8 {
+    position: relative;
+    top: -160px;
+    left: 50px;
+    width: 230px;
+    border: 2px solid green;
+    outline: none;
+    background: rgb(0, 153, 0);
+}
+
+
+
+
+
+#newDiv {
+    width: 1200px;
+    height: 720px;
+    margin: 40px auto;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    justify-content: space-around;
+    gap: 10px;
+    margin-top: 40px;
+    justify-items: center;
+}
